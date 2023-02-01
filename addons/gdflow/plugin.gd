@@ -19,7 +19,8 @@ func _enter_tree() -> void:
 	get_editor_interface().get_editor_main_screen().add_child(editor)
 	
 	editor_manager = GDFlowEditorManager.new()
-	get_tree().root.add_child(editor_manager)
+	editor_manager.name = GDFlowEditorManager.NAME
+	get_tree().root.call_deferred("add_child", editor_manager)
 	
 	_make_visible(false)
 

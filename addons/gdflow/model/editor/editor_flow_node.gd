@@ -60,6 +60,8 @@ const DEFAULT_COLOR := Color.WHITE
 const PARAM_COLOR := Color.GOLDENROD
 const RETURN_COLOR := Color.VIOLET
 
+var uuid: int = GDFlowUtil.uuid()
+
 var _slots: int = 0
 
 #-----------------------------------------------------------------------------#

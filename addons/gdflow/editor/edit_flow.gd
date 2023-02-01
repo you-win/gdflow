@@ -3,7 +3,9 @@ extends HSplitContainer
 @onready
 var _node_actions: HFlowContainer = %NodeActions
 @onready
-var _workspace: GraphEdit = %Workspace
+var workspace: GraphEdit = %Workspace
+
+var uuid: int = GDFlowUtil.uuid()
 
 #-----------------------------------------------------------------------------#
 # Builtin functions
@@ -11,6 +13,8 @@ var _workspace: GraphEdit = %Workspace
 
 func _ready() -> void:
 	self.split_offset = self.size.x * 0.1
+	
+	GDFlowUtil.editor_manager().register_flow(self)
 	
 	%AddVar.pressed.connect(func() -> void:
 		pass
@@ -52,8 +56,8 @@ func _add_to_workspace(node: EditorFlowNode) -> void:
 		_node_actions.visible = _node_actions.get_child_count() != 0
 	)
 	
-	_workspace.add_child(node)
-	_workspace.set_selected(node)
+	workspace.add_child(node)
+	workspace.set_selected(node)
 
 #-----------------------------------------------------------------------------#
 # Public functions

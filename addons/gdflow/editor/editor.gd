@@ -120,10 +120,6 @@ var _redo_option_idx: int = -1
 #-----------------------------------------------------------------------------#
 
 func _ready() -> void:
-	var node := Node.new()
-	node.name = "MyNode"
-	get_tree().root.call_deferred("add_child", node)
-	
 	_setup_menu_button(%File, FileOptions, func(idx: int, pm: PopupMenu) -> void:
 		match pm.get_item_text(idx):
 			FileOptions.FileSection.NEW_FLOW.text:
