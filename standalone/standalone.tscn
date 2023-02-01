@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciox5tgvqgh0j"]
+
+[ext_resource type="Script" path="res://standalone/standalone.gd" id="1_p558j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ey1o"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Standalone" type="CanvasLayer"]
+script = ExtResource("1_p558j")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ey1o")

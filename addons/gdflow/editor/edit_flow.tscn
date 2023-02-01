@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcqmtu7605m38"]
+
+[ext_resource type="Script" path="res://addons/gdflow/editor/edit_flow.gd" id="1_2tox5"]
+
+[node name="EditFlow" type="HSplitContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 100
+script = ExtResource("1_2tox5")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="Options" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AddVar" type="Button" parent="ScrollContainer/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Var"
+
+[node name="AddConst" type="Button" parent="ScrollContainer/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Const"
+
+[node name="AddFunc" type="Button" parent="ScrollContainer/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Func"
+
+[node name="AddClass" type="Button" parent="ScrollContainer/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Class"
+
+[node name="AddRaw" type="Button" parent="ScrollContainer/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Raw"
+
+[node name="AddComment" type="Button" parent="ScrollContainer/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Comment"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="NodeActions" type="HFlowContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Workspace" type="GraphEdit" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_offset = Vector2(-8, -614)
